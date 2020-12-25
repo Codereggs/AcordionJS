@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<head>
+<title>Aprendiendo a hacer Acordeones.</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<style type="text/css">
+		/* Normalizando CSS */
+
+html {
+  height: 100%;
+  background: #e3e3e0;
+}
+a {
+  text-decoration: none;
+}
+:focus, :active {
+  outline: 0;
+}
+
+/* Normalizamos el box sizing */
+
+* { 
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Acordeon CSS */
+
+#acordeon {
+	width: 300px;
+	margin: 50px auto;
+	
+}
+
+#acordeon div div{
+	border: 2px solid black;
+}
+
+#acordeon .ui-accordion-content {
+  width: 100%;
+  background-color: #D3CECE;
+  color: #000000;
+  font-size: 10pt;
+  line-height: 16pt;
+}
+
+#acordeon .ui-accordion-content a {
+  color: #777;
+}
+
+#acordeon .ui-accordion-header {
+  background-color: black;
+  margin: 0px;
+	color: white;
+}
+
+#acordeon .ui-accordion-header:first-of-type {
+  background-color: #292DFF;
+  background-image: -moz-linear-gradient(top,  #292DFF 0%, #29d8ff 100%); /* FF3.6+ */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#292DFF), color-stop(100%,#29d8ff)); /* Chrome,Safari4+ */
+  background-image: -webkit-linear-gradient(top,  #292DFF 0%,#29d8ff 100%); /* Chrome10+,Safari5.1+ */
+  background-image: -o-linear-gradient(top,  #292DFF 0%,#29d8ff 100%); /* Opera 11.10+ */
+  background-image: -ms-linear-gradient(top,  #292DFF 0%,#29d8ff 100%); /* IE10+ */
+  background-image: linear-gradient(to bottom,  #292DFF 0%,#29d8ff 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#292DFF', endColorstr='#29d8ff',GradientType=0 ); /* IE6-9 */
+}
+
+#acordeon .ui-accordion-header:nth-of-type(2)  {
+  background-color: #292DFF;
+  background-image: -moz-linear-gradient(top,  #292DFF 0%, #29d8ff 100%); /* FF3.6+ */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#292DFF), color-stop(100%,#29d8ff)); /* Chrome,Safari4+ */
+  background-image: -webkit-linear-gradient(top,  #292DFF 0%,#29d8ff 100%); /* Chrome10+,Safari5.1+ */
+  background-image: -o-linear-gradient(top,  #292DFF 0%,#29d8ff 100%); /* Opera 11.10+ */
+  background-image: -ms-linear-gradient(top,  #292DFF 0%,#29d8ff 100%); /* IE10+ */
+  background-image: linear-gradient(to bottom,  #292DFF 0%,#29d8ff 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#292DFF', endColorstr='#29d8ff',GradientType=0 ); /* IE6-9 */
+}
+
+#acordeon .ui-accordion-header:last-of-type {
+  background-color: #292DFF;
+  background-image: -moz-linear-gradient(top,  #292DFF 0%, #29d8ff 100%); /* FF3.6+ */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#292DFF), color-stop(100%,#29d8ff)); /* Chrome,Safari4+ */
+  background-image: -webkit-linear-gradient(top,  #292DFF 0%,#29d8ff 100%); /* Chrome10+,Safari5.1+ */
+  background-image: -o-linear-gradient(top,  #292DFF 0%,#29d8ff 100%); /* Opera 11.10+ */
+  background-image: -ms-linear-gradient(top,  #292DFF 0%,#29d8ff 100%); /* IE10+ */
+  background-image: linear-gradient(to bottom,  #292DFF 0%,#29d8ff 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#292DFF', endColorstr='#29d8ff',GradientType=0 ); /* IE6-9 */
+}
+	</style>
+</head>
+
+
+<body>
+	
+<div id="acordeon">
+	<h3> Parte 1 </h3>
+	<div>
+	<p> La planada es verde.	</p>
+	</div>
+	<h3> Parte 2 </h3>
+	<div>
+	<p>Me gusta la música country porque es muy llanera.	</p>
+	</div>
+	<h3> Parte 3	</h3>
+	<div>
+	<p> Organize los siguientes datos de acuerdo al orden natural:	</p>
+		<div>
+			<ul id="sortable">
+			
+			<li>Bibliografía</li>
+			<li>Contenido</li>
+			<li>Desenlace</li>
+			<li>Conclusión</li>
+			<li>Introducción</li>
+			</ul>
+		</div>
+	
+	</div>
+
+</div>
+<script type="text/javascript">
+  $( function() {
+    $( "#acordeon" ).accordion();
+  } );
+	
+	$( "#sortable" ).sortable();
+	
+	$( "#sortable" ).disableSelection();
+	</script>
+</body>
